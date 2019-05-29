@@ -1,5 +1,14 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+export interface ExampleData {
+  url: any;
+  path: string;
+  data: {
+    somethingCool?: string;
+    dogimgurl?: string;
+    description?: string;
+  };
+}
 
 @Component({
   selector: 'app-f1test3',
@@ -7,11 +16,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./f1test3.component.css'],
 })
 export class F1test3Component implements OnInit {
-  radData = {
+  radData: ExampleData = {
     url: {},
     path: '',
     data: {},
-    routerConfig: {},
   };
   constructor(private router: Router, private route: ActivatedRoute) {}
 
@@ -30,7 +38,6 @@ export class F1test3Component implements OnInit {
       console.log(data);
       this.radData.data = data;
     });
-    // this.radData.routerConfig = this.router.config;
     console.log(this.router.config);
   }
 }

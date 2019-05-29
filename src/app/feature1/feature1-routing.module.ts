@@ -20,7 +20,16 @@ const routes: Routes = [
       {
         path: 'child3',
         component: F1test3Component,
-        data: { somethingCool: 'Cawabunga' },
+        data: {
+          somethingCool: 'Cawabunga',
+          dogimgurl: 'https://media.giphy.com/media/1kkxWqT5nvLXupUTwK/giphy.gif',
+          description: `Vivamus malesuada consectetur ultricies.
+          Nunc in erat in enim pulvinar fringilla. Vivamus quis bibendum nunc,
+          ac dignissim arcu. Nullam et nulla quis lorem fermentum fermentum.
+          Suspendisse ut orci risus. Etiam eget ipsum turpis. Aliquam ipsum justo,
+          consequat at lacus ac, maximus ultrices elit. Sed vestibulum elit nunc,
+          id porttitor sapien blandit ullamcorper.`,
+        },
       },
     ],
   },
